@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node:
+    build: .
+    ports:
+      - "10022:22"
+      - "10080:3000"
+    volumes:
+      - ./user_app:/home/node/app
+      - ./configs/sshd_config:/etc/ssh/sshd_config
+
